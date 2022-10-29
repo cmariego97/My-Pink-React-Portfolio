@@ -66,6 +66,7 @@
 .sectionContent-2 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -77,12 +78,13 @@
 }
 
 .sectionInfo {
-    display: inline;
+    display: flex;
+    width: 50%;
     margin: 2rem;
     padding: 2rem;
     color: var(--revolver);
     line-height: 1.5;
-    text-align: justify;
+    text-align: center;
 }
 
 /* PROJECTS */
