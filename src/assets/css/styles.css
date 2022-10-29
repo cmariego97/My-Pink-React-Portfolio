@@ -1,0 +1,72 @@
+:root {
+    --gray-nurse: #F3F4F3;
+    --east-side: #9783C7;
+    --cerise: #CB2193;
+    --tapestry: #BE6B93;
+    --revolver: #271B36;
+    --camouflage-green: #728464;
+    --tango: #ef742c;
+    --pomegranate: #f44336;
+    --box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%), 0 4px 25px 0px rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+}
+
+/* NAVBAR */
+.navBar {
+    margin: 0.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* HEADER */
+.headWrapper {
+    background-image: url(../images/marble-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials {
+    display: flex;
+    align-items: left;
+}
+
+/* ABOUT ME */
+.aboutContainer {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.aboutMe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+    background-color: var(--gray-nurse);
+}
+
+.avatar {
+    box-shadow: var(--box-shadow);
+}
+
+.sectionContent {
+    width: 55%;
+}
+
+.sectionTitle {
+    color: var(--tapestry);
+    text-shadow: var(--box-shadow);
+}
+
+.sectionInfo {
+    display: inline;
+    padding: 2rem;
+    color: var(--revolver);
+    line-height: 1.5;
+    text-align: justify;
+}

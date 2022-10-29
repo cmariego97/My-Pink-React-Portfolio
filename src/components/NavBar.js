@@ -1,31 +1,52 @@
 import * as React from 'react'
+import '../assets/css/styles.css'
 
 // import MUI
-import { AppBar, Box, Button, Container, MenuItem, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Container, MenuItem, TabScrollButton, Toolbar, Typography } from '@mui/material'
 
 // import icons
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 
-// import pages
-const pages = ['Projects', 'Contact']
+// import react scroll
+import { Link as Scroll } from 'react-scroll';
 
 function NavBar(changePage) {
   return (
-    <AppBar position="static">
+    <AppBar position="sticky">
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <FavoriteBorderRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-          <Typography variant="h5" component="a" href="/" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem', color: 'inherit', textDecoration: 'none'}}>
-            Hello There ~
-          </Typography>
+        <Toolbar disableGutters className="navBar">
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, m:2 }}>
+            <FavoriteBorderRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <FavoriteBorderRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            <FavoriteBorderRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          </Box>
+          
 
-          <MenuItem href="#about" onClick={() => changePage('About')}>About</MenuItem>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, m:2 }}>
+            <Scroll to="about-me" smooth={true}>
+              <MenuItem>
+                <Typography variant="h6" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>About Me</Typography>
+              </MenuItem>
+            </Scroll>
 
-          <MenuItem href="#work" onClick={() => changePage('Projects')}>My Projects</MenuItem>
+            <Scroll to="my-projects" smooth={true}>
+              <MenuItem>
+                <Typography variant="h6" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>My Projects</Typography>
+              </MenuItem>
+            </Scroll>
 
-          <MenuItem href="#resume" onClick={() => changePage('Resume')}>Resume</MenuItem>
+            <Scroll to="contact-me" smooth={true}>
+              <MenuItem>
+                <Typography variant="h6" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>Contact Me</Typography>
+              </MenuItem>
+            </Scroll>
 
-          <MenuItem href="#contact" onClick={() => changePage('Contact')}>Contact</MenuItem>
+            <Scroll to="my-resume" smooth={true}>
+              <MenuItem>
+                <Typography variant="h6" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}> My Resume</Typography>
+              </MenuItem>
+            </Scroll>
+          </Box>
         </Toolbar>
 
       </Container>

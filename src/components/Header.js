@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../assets/css/style.css'
+import '../assets/css/styles.css'
 
 // import MUI
 import { Box, IconButton, Link, Typography} from '@mui/material'
