@@ -1,0 +1,28 @@
+:root {
+    --gray-nurse: #F3F4F3;
+    --east-side: #9783C7;
+    --cerise: #CB2193;
+    --tapestry: #BE6B93;
+    --revolver: #271B36;
+    --camouflage-green: #728464;
+    --tango: #ef742c;
+    --pomegranate: #f44336;
+}
+
+/* HEADER.js */
+.headWrapper {
+    background-image: url(../images/marble-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials {
+    display: flex;
+    align-items: left;
+}
