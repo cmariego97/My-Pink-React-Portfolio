@@ -1,9 +1,8 @@
 import * as React from 'react';
 import '../assets/css/style.css'
-import pfp from '../assets/images/pfpAvatar.jpeg'
 
 // import MUI
-import { Avatar, Box, IconButton, Link, Typography} from '@mui/material'
+import { Box, IconButton, Link, Typography} from '@mui/material'
 import { Stack } from '@mui/system';
 
 // import components
