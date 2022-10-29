@@ -37,7 +37,7 @@
 
 /* ABOUT ME */
 .aboutContainer {
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -46,7 +46,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 2rem 0;
+    margin: 2rem 8rem;
     background-color: var(--gray-nurse);
 }
 
@@ -55,18 +55,45 @@
 }
 
 .sectionContent {
+    display: flex;
+    justify-content: center;
     width: 55%;
 }
 
+.sectionContent-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
 .sectionTitle {
+    margin: 2rem 0;
+    padding: 2rem;
     color: var(--tapestry);
     text-shadow: var(--box-shadow);
 }
 
 .sectionInfo {
     display: inline;
+    margin: 2rem;
     padding: 2rem;
     color: var(--revolver);
     line-height: 1.5;
     text-align: justify;
+}
+
+/* PROJECTS */
+.projectsContainer {
+    width: 85%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.masonry {
+    margin: 2rem 0;
+    width: 80%;
+}
+
+.masonryItem {
+    box-shadow: var(--box-shadow);
 }

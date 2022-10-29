@@ -11,7 +11,7 @@ function AboutMe() {
         <Box id="about-me" className="aboutMe" sx={{ display: { xs: 'none', md: 'flex' }}}>
             <Avatar alt="an image of clarence" src={pfp} className="avatar" sx={{ width: 400, height: 400 }}/>
 
-            <Box className="sectionContent" sx={{ my: 2}}>
+            <Box className="sectionContent-2" sx={{ my: 2}}>
                 <Typography className="sectionTitle" variant="h2" sx={{ fontSize: 45, letterSpacing: '.3rem', textTransform: 'lowercase'}}> About Me </Typography>
                 <Typography className="sectionInfo" variant="p" sx={{ color: "info"}}>
                     Hello there, I am Claire. I am 25 years old. I currently study Nursing and Web Development while working full-time in an ICU. I've always had an interest in coding and design and took the Coding Bootcamp as an opportunity to finally delve more into it.

@@ -4,6 +4,7 @@ import './assets/css/App.css';
 
 //import MUI
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
+import { Divider } from '@mui/material';
 
 //import components
 import NavBar from './components/NavBar';
@@ -11,7 +12,6 @@ import Header from './components/Header';
 import AboutMe from './components/AboutMe';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import { fontWeight } from '@mui/system';
 
 const theme = createTheme({
   palette: {
@@ -94,6 +94,8 @@ function App() {
           <NavBar />
           <Header />
           <AboutMe />
+          <Projects />
+          <Contact />
         </header>
       </div>
     </ThemeProvider>
