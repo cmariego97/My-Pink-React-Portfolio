@@ -91,7 +91,7 @@ const itemData = [
 
 function Projects() {
     return (
-        <Box className="projectsContainer" sx={{ minHeight: 829 }}>
+        <Box id="my-projects" className="projectsContainer" sx={{ minHeight: 829 }}>
             <Box className="sectionContent-2" sx={{ my: 2}}>
                 <Typography className="sectionTitle" variant="h2" sx={{ fontSize: 45, letterSpacing: '.3rem', textTransform: 'lowercase'}}> My Projects </Typography>
 

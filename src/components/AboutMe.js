@@ -7,8 +7,8 @@ import { Avatar, Box, Typography} from '@mui/material'
 
 function AboutMe() {
   return (
-    <Box className="aboutContainer" sx={{ my: 2 }}>
-        <Box id="about-me" className="aboutMe" sx={{ display: { xs: 'none', md: 'flex' }}}>
+    <Box id="about-me" className="aboutContainer" sx={{ my: 2 }}>
+        <Box className="aboutMe" sx={{ display: { xs: 'none', md: 'flex' }}}>
             <Avatar alt="an image of clarence" src={pfp} className="avatar" sx={{ width: 400, height: 400 }}/>
 
             <Box className="sectionContent-2" sx={{ my: 2}}>
