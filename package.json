@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "main": "server/index.js",
+  "engines": {
+    "node": "16.18.0"
+  },
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
@@ -32,6 +35,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:8000",
   "eslintConfig": {
     "extends": [
       "react-app",
