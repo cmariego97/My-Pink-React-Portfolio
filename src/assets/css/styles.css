@@ -79,6 +79,7 @@
 
 .sectionInfo {
     display: flex;
+    flex-direction: column;
     width: 50%;
     margin: 2rem;
     padding: 2rem;
@@ -101,4 +102,11 @@
 
 .masonryItem {
     box-shadow: var(--box-shadow);
+}
+
+/* CONTACT ME */
+.contactInfo {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
 }

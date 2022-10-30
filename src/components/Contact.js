@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import '../assets/css/styles.css'
 
-//import font awesome icons
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+// import MUI
+import { Box, Link, Typography, } from '@mui/material'
+
+//import icons
+import { LocalPhoneRounded, MailOutlineRounded } from '@mui/icons-material'
+import { hover } from '@testing-library/user-event/dist/hover';
+
 
 function Contact () {
     const [contactName, setName] = useState('');
@@ -77,13 +81,21 @@ function Contact () {
     //renders Contact page using styling and icons
     //utilizes inputChange and formSubmit functions defined above
     return(
-        <div className="d-flex outer-container">
-            <div className="card text-center con-info">
-            <h2 style={styles.heading}>Contact Info</h2>
-            <ul>
-                <li style={styles.li}><FontAwesomeIcon icon={faPhone} size='lg' style={styles.icon}/>517-375-7765</li>
-                <li id="email" style={styles.li}><FontAwesomeIcon icon={faEnvelope} size="lg" style={styles.icon}/><a href="mailto:rpecuch@comcast.net" style={styles.a} >rpecuch@comcast.net</a></li>
-            </ul>
+        <Box id="contact-me" className="contactContainer" sx={{ my:2 }}>
+            <Box className="card text-center con-info">
+                <Typography variant="h2" className="sectionTitle" sx={{ my:2 }}>Contact Info</Typography>
+                <Box className="sectionInfo">
+                    <Typography variant="h6" className="contactInfo">
+                        <LocalPhoneRounded sx={{ px:2 }}/>
+                        (908) 917 - 0180
+                    </Typography>
+                    <Typography id="email" variant="h6" className="contactInfo">
+                        <MailOutlineRounded sx={{ px:2 }}/>
+                        <Link href="mailto:cmarie.go97@gmail.com" className="contactLink">
+                            cmarie.go97@gmail.com
+                        </Link>
+                    </Typography>
+                </Box>
 
             <form>
                 <h2 style={styles.heading}>Contact Me</h2>
@@ -102,9 +114,9 @@ function Contact () {
                 <p style={styles.li}>{confMessage}</p>
                 <button type="button" onClick={formSubmit}>Submit</button>
             </form>
-            </div>
+            </Box>
             
-        </div>
+        </Box>
     )
 }
 
