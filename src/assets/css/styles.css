@@ -88,6 +88,11 @@
     text-align: center;
 }
 
+.emailInfo {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* PROJECTS */
 .projectsContainer {
     width: 85%;
@@ -105,16 +110,50 @@
 }
 
 /* CONTACT ME */
+.contactContainer {
+    width: 85%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem 5rem;
+    background-color: var(--gray-nurse);
+}
+
 .infoContent {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .contactInfo {
-    width: 40%;
+    height: 50px;
+    width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+.formContainer {
     padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: var(--box-shadow);
+}
+
+.formGroup {
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.formButton {
+    width: 40%;
+}
+
+.confMessage {
+    color: var(--pomegranate);
 }

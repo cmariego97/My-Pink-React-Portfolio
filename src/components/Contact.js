@@ -2,32 +2,38 @@ import React, { useState } from 'react';
 import '../assets/css/styles.css'
 
 // import MUI
-import { Box, Link, styled, TextField, Typography, } from '@mui/material'
+import { Box, Button, Link, Paper, styled, TextField, Typography, } from '@mui/material'
 
 //import icons
 import { LocalPhoneRounded, MailOutlineRounded } from '@mui/icons-material'
-import { hover } from '@testing-library/user-event/dist/hover';
 
 // CSSTextField for Text Box
 const CssTextField = styled(TextField)({
     '& label.Mui-focused': {
-      color: 'green',
+        color: '#728464',
     },
     '& .MuiInput-underline:after': {
-      borderBottomColor: 'green',
+        borderBottomColor: '#728464',
     },
     '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: 'red',
-      },
-      '&:hover fieldset': {
-        borderColor: 'yellow',
-      },
-      '&.Mui-focused fieldset': {
-        borderColor: 'green',
-      },
+        '& fieldset': {
+            borderColor: '#CB2193',
+        },
+        '&:hover fieldset': {
+            borderColor: '#ef742c',
+        },
+        '&.Mui-focused fieldset': {
+            borderColor: '#728464',
+        },
     },
   });
+
+// Styles for Paper component
+const FormPaper = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  textAlign: 'center',
+  lineHeight: '1.5',
+}));
 
 function Contact () {
     const [contactName, setName] = useState('');
@@ -53,13 +59,13 @@ function Contact () {
         }
         //displays message if an input field is left blank
         if (!contactName) {
-            setConfMessage('Name is required')
+            setConfMessage('Please enter your name!')
         }
         if (!email) {
-            setConfMessage('Email is required')
+            setConfMessage('Please enter your e-mail!')
         }
         if (!message) {
-            setConfMessage('Message is required')
+            setConfMessage('Please enter a message!')
         }
     }
     //runs when submit button is clicked
@@ -75,7 +81,7 @@ function Contact () {
         }
         //success message displayed and clears input fields
         else {
-            setConfMessage('Message received!');
+            setConfMessage('Thank you! Message received!');
             setName('');
             setEmail('');
             setMessage('');
@@ -102,38 +108,36 @@ function Contact () {
     //utilizes inputChange and formSubmit functions defined above
     return(
         <Box id="contact-me" className="contactContainer" sx={{ my:2 }}>
-            <Box className="sectionContent-2">
-                <Typography variant="h2" className="sectionTitle" sx={{ my:2, letterSpacing: '.3rem', textTransform: 'lowercase' }}>Socials & Contact</Typography>
-                <Box className="infoContent">
-                    <Box className="sectionInfo">
-                        <Typography variant="h6" className="contactInfo">
-                            <LocalPhoneRounded sx={{ px:2 }}/>
-                            (908) 917 - 0180
-                        </Typography>
-                        <Typography id="email" variant="h6" className="contactInfo">
-                            <MailOutlineRounded sx={{ px:2 }}/>
-                            <Link href="mailto:cmarie.go97@gmail.com" className="contactLink">
-                                cmarie.go97@gmail.com
-                            </Link>
-                        </Typography>
-                    </Box>
-
-                    <Box>
-                        <Box className="form-group">
-                            <CssTextField label="Full Name" id="full-name" type="text" className="form-control" name="name" value={contactName} onChange={inputChange}/>
-                        </Box>
-                        <div className="form-group">
-                            <label htmlFor="email" style={styles.li}>Email address:</label>
-                            <input type="email" className="form-control" value={email} name="email" onChange={inputChange} placeholder="name@example.com"/>
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message" style={styles.li}>Message:</label>
-                            <textarea className="form-control" value={message} name="message" onChange={inputChange} rows="8"></textarea>
-                        </div>
-                        <p style={styles.li}>{confMessage}</p>
-                        <button type="button" onClick={formSubmit}>Submit</button>
-                    </Box>
+            <Typography variant="h2" className="sectionTitle" sx={{ my:2, letterSpacing: '.3rem', textTransform: 'lowercase' }}>Socials & Contact</Typography>
+            <Box className="infoContent">
+                <Box className="sectionInfo">
+                    <Typography variant="h6" className="contactInfo phoneNumber">
+                        <LocalPhoneRounded sx={{ px:2 }}/>
+                        (908)917-0180
+                    </Typography>
+                    <Typography id="email" variant="h6" className="contactInfo emailInfo">
+                        <MailOutlineRounded sx={{ px:2 }}/>
+                        <Link href="mailto:cmarie.go97@gmail.com" className="contactLink">
+                            cmarie.go97@gmail.com
+                        </Link>
+                    </Typography>
                 </Box>
+
+                <FormPaper className="formContainer">
+                    <Box className="formGroup">
+                        <CssTextField label="Full Name" id="full-name" type="text" className="form-control" name="name" value={contactName} onChange={inputChange} placeholder="Peter B. Parker" fullWidth required/>
+                    </Box>
+                    <Box className="formGroup">
+                        <CssTextField label="E-mail" id="e-mail" type="email" className="form-control" value={email} name="email" onChange={inputChange} placeholder="name@example.com" fullWidth required/>
+                    </Box>
+                    <Box className="formGroup">
+                        <CssTextField label="Message" id="message" className="form-control" value={message} name="message" onChange={inputChange} multiline rows={8} placeholder="I don't feel so good, Mr. Stark..." fullWidth required></CssTextField>
+                    </Box>
+                    <Typography className="confMessage" variant="p">{confMessage}</Typography>
+                    <Box className="formGroup">
+                        <Button variant="outlined" className="formButton" type="button" onClick={formSubmit}>Submit</Button>
+                    </Box>
+                </FormPaper>
             </Box>
             
         </Box>
