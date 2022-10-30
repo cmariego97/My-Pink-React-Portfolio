@@ -123,7 +123,8 @@ function Contact () {
                     </Typography>
                 </Box>
 
-                <FormPaper className="formContainer">
+                <FormPaper className="formContainer" elevation={2}>
+                    <Typography variant="h6">Send me a message</Typography>
                     <Box className="formGroup">
                         <CssTextField label="Full Name" id="full-name" type="text" className="form-control" name="name" value={contactName} onChange={inputChange} placeholder="Peter B. Parker" fullWidth required/>
                     </Box>

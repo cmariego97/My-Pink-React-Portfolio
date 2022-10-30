@@ -25,25 +25,25 @@ function NavBar(changePage) {
           <Box sx={{ display: { xs: 'none', md: 'flex' }, m:2 }}>
             <Scroll to="about-me" smooth={true}>
               <MenuItem>
-                <Typography variant="h6" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>About Me</Typography>
+                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>About Me</Typography>
               </MenuItem>
             </Scroll>
 
             <Scroll to="my-projects" smooth={true}>
               <MenuItem>
-                <Typography variant="h6" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>My Projects</Typography>
+                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>My Projects</Typography>
               </MenuItem>
             </Scroll>
 
             <Scroll to="contact-me" smooth={true}>
               <MenuItem>
-                <Typography variant="h6" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>Contact Me</Typography>
+                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>Contact Me</Typography>
               </MenuItem>
             </Scroll>
 
             <Scroll to="my-resume" smooth={true}>
               <MenuItem>
-                <Typography variant="h6" sx={{ mr: 2, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}> My Resume</Typography>
+                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}> My Resume</Typography>
               </MenuItem>
             </Scroll>
           </Box>
