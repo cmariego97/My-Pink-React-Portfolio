@@ -105,7 +105,15 @@
 }
 
 /* CONTACT ME */
+.infoContent {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
 .contactInfo {
+    width: 40%;
     display: flex;
     flex-direction: row;
     padding: 1rem 0;

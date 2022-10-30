@@ -93,7 +93,7 @@ function Projects() {
     return (
         <Box id="my-projects" className="projectsContainer" sx={{ minHeight: 829 }}>
             <Box className="sectionContent-2" sx={{ my: 2}}>
-                <Typography className="sectionTitle" variant="h2" sx={{ fontSize: 45, letterSpacing: '.3rem', textTransform: 'lowercase'}}> My Projects </Typography>
+                <Typography variant="h2" className="sectionTitle" sx={{ my:2, letterSpacing: '.3rem', textTransform: 'lowercase'}}> My Projects </Typography>
 
                 <Masonry columns={3} spacing={2} className="masonry">
                     {itemData.map((item, index) => (
