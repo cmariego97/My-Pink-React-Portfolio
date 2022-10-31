@@ -5,7 +5,8 @@ import '../assets/css/styles.css'
 import { Box, Button, Link, Paper, styled, TextField, Typography, } from '@mui/material'
 
 //import icons
-import { LocalPhoneRounded, MailOutlineRounded } from '@mui/icons-material'
+import { MailOutlineRounded, GitHub, Instagram } from '@mui/icons-material'
+
 
 // CSSTextField for Text Box
 const CssTextField = styled(TextField)({
@@ -87,38 +88,29 @@ function Contact () {
             setMessage('');
         }
     }
-    //define custom styles (in addition to stylesheet)
-    const styles = {
-        icon: {
-            marginRight: '1%'
-        },
-        a: {
-            textDecoration: 'none',
-            color: 'inherit'
-        },
-        heading: {
-            fontSize: '300%',
-            color: 'grey'
-        },
-        li: {
-            fontSize: '150%'
-        }
-    }
     //renders Contact page using styling and icons
     //utilizes inputChange and formSubmit functions defined above
     return(
         <Box id="contact-me" className="contactContainer" sx={{ my:2 }}>
             <Typography variant="h2" className="sectionTitle" sx={{ my:2, letterSpacing: '.3rem', textTransform: 'lowercase' }}>Socials & Contact</Typography>
             <Box className="infoContent">
-                <Box className="sectionInfo">
-                    <Typography variant="h6" className="contactInfo phoneNumber">
-                        <LocalPhoneRounded sx={{ px:2 }}/>
-                        (908)917-0180
-                    </Typography>
-                    <Typography id="email" variant="h6" className="contactInfo emailInfo">
-                        <MailOutlineRounded sx={{ px:2 }}/>
-                        <Link href="mailto:cmarie.go97@gmail.com" className="contactLink">
+                <Box className="sectionInfo contactLinkContainer">
+                    <Typography id="email" variant="p" className="contactInfo" sx={{ py:4 }}>
+                        <MailOutlineRounded fontSize="large" sx={{ px:2 }}/>
+                        <Link href="mailto:cmarie.go97@gmail.com" className="contactLink" underline="hover">
                             cmarie.go97@gmail.com
+                        </Link>
+                    </Typography>
+                    <Typography id="GitHub" variant="p" className="contactInfo" sx={{ py:4 }}>
+                        <GitHub fontSize="large" color="info" sx={{ px:2 }}/>
+                        <Link href="https://github.com/cmariego97" className="contactLink" underline="hover">
+                            cmariego97
+                        </Link>
+                    </Typography>
+                    <Typography id="instagram" variant="p" className="contactInfo" sx={{ py:4 }}>
+                        <Instagram fontSize="large" sx={{ px:2 }}/>
+                        <Link href="https://instagram.com/cme.gogogo" className="contactLink" underline="hover">
+                            @cme.gogogo
                         </Link>
                     </Typography>
                 </Box>

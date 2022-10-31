@@ -41,10 +41,11 @@
     width: 100%;
     margin: 5rem auto;
     display: flex;
-    align-content: center;
+    justify-content: space-evenly;
 }
 
 .aboutMe {
+    width: 75%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -54,10 +55,12 @@
 }
 
 .avatar {
+    width: 30%;
     box-shadow: var(--box-shadow);
 }
 
 .sectionContent {
+    width: 65%;
     display: flex;
     justify-content: center;
     width: 55%;
@@ -78,14 +81,18 @@
 }
 
 .sectionInfo {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 2rem;
+    width: 60%;
+    margin: 0 auto;
     padding: 2rem;
     color: var(--revolver);
     line-height: 1.5;
     text-align: center;
+}
+
+.sectionInfoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .emailInfo {
@@ -109,6 +116,10 @@
     box-shadow: var(--box-shadow);
 }
 
+.masonryLink {
+    display: ;
+}
+
 /* CONTACT ME */
 .contactContainer {
     width: 85%;
@@ -126,15 +137,27 @@
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .contactInfo {
     height: 50px;
     width: 100%;
     display: flex;
-    font-size: 18px;
-    flex-direction: row;
+    flex-direction: row; 
+    align-items: center; 
+}
+
+.contactLink {
+    color: var(--revolver);
+    font-size: 30px;
+}
+
+.contactLinkContainer {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .formContainer {
@@ -145,6 +168,10 @@
     justify-content: center;
     column-rule: var(info);
     box-shadow: var(--box-shadow);
+}
+
+.contactLink {
+    text-decoration: none;
 }
 
 .formGroup {

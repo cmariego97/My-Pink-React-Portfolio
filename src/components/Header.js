@@ -2,11 +2,8 @@ import * as React from 'react';
 import '../assets/css/styles.css'
 
 // import MUI
-import { Box, IconButton, Link, Typography} from '@mui/material'
+import { Box, Link, Typography} from '@mui/material'
 import { Stack } from '@mui/system';
-
-// import components
-import NavBar from './NavBar'
 
 // import icons
 import InstagramIcon from '@mui/icons-material/Instagram';

@@ -2,7 +2,7 @@ import * as React from 'react'
 import '../assets/css/styles.css'
 
 // import MUI
-import { AppBar, Box, Button, Container, MenuItem, TabScrollButton, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Container, MenuItem, Toolbar, Typography } from '@mui/material'
 
 // import icons
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';

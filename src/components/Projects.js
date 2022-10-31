@@ -3,8 +3,11 @@ import '../assets/css/styles.css'
 
 // import MUI
 import { styled } from '@mui/material/styles';
-import { Box, Paper, Typography} from '@mui/material'
+import { Box, Link, Paper, Typography} from '@mui/material'
 import Masonry from '@mui/lab/Masonry';
+
+// import icons
+import { GitHub, Language } from '@mui/icons-material'
 
 // styling
 const Label = styled(Paper)(({ theme }) => ({
@@ -20,72 +23,40 @@ const Label = styled(Paper)(({ theme }) => ({
 // images
 const itemData = [
     {
-      img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-      title: 'Fern',
+      img: 'https://i.ibb.co/VTH1t0n/kids-rx-emr.png',
+      title: 'Kids-Rx-EMR',
+      github: '',
+      app: 'https://kids-rx-emr.herokuapp.com/',
     },
     {
-      img: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f',
-      title: 'Snacks',
+      img: 'https://i.ibb.co/CnwrGzg/virtualpartyapp.png',
+      title: 'Virtual-Party App',
+      github: 'https://github.com/rpecuch/virtual-party',
+      app: 'https://rpecuch.github.io/virtual-party/',
     },
     {
-      img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-      title: 'Mushrooms',
+      img: 'https://i.ibb.co/CJ36F3n/pastel-portfolio.png',
+      title: 'My First Portfolio',
+      github: 'https://github.com/cmariego97/Claire-s-Pastel-Portfolio',
+      app: 'https://cmariego97.github.io/Claire-s-Pastel-Portfolio/'
     },
     {
-      img: 'https://images.unsplash.com/photo-1529655683826-aba9b3e77383',
-      title: 'Tower',
+      img: 'https://i.ibb.co/PM4LDjc/weatherdash.png',
+      title: 'Weather Dashboard',
+      github: 'https://github.com/cmariego97/Weather-Dashboard-API',
+      app: 'https://cmariego97.github.io/Weather-Dashboard-API/',
     },
     {
-      img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-      title: 'Sea star',
+      img: 'https://i.ibb.co/q7S2ssL/work-day.png',
+      title: 'Work Day Scheduler',
+      github: 'https://github.com/cmariego97/Work-Day-Scheduler',
+      app: 'https://cmariego97.github.io/Work-Day-Scheduler/',
     },
     {
-      img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-      title: 'Honey',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-      title: 'Basketball',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
-      title: 'Breakfast',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1627328715728-7bcc1b5db87d',
-      title: 'Tree',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-      title: 'Burger',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-      title: 'Camera',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-      title: 'Coffee',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1627000086207-76eabf23aa2e',
-      title: 'Camping Car',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-      title: 'Hats',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-      title: 'Tomato basil',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1627328561499-a3584d4ee4f7',
-      title: 'Mountain',
-    },
-    {
-      img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-      title: 'Bike',
+      img: 'https://i.ibb.co/p3GpLRj/javascript-quiz.png',
+      title: 'JavaScript Quiz',
+      github: 'https://github.com/cmariego97/A-Broken-JavaScript-Quiz',
+      app: 'https://cmariego97.github.io/A-Broken-JavaScript-Quiz/',
     },
   ];
 
@@ -94,11 +65,9 @@ function Projects() {
         <Box id="my-projects" className="projectsContainer" sx={{ minHeight: 829 }}>
             <Box className="sectionContent-2" sx={{ my: 2}}>
                 <Typography variant="h2" className="sectionTitle" sx={{ my:2, letterSpacing: '.3rem', textTransform: 'lowercase'}}> My Projects </Typography>
-
-                <Masonry columns={3} spacing={2} className="masonry">
+                <Masonry columns={2} spacing={3} className="masonry">
                     {itemData.map((item, index) => (
                     <div key={index} className="masonryItem">
-                        <Label>{index + 1}</Label>
                         <img
                         src={`${item.img}?w=162&auto=format`}
                         srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
@@ -111,6 +80,14 @@ function Projects() {
                             width: '100%',
                         }}
                         />
+                        <Label className="masonryLink">
+                          <Link href={`${item.github}`}>
+                            <GitHub />
+                          </Link>
+                          <Link href={`${item.app}`}>
+                            <Language />
+                          </Link>
+                      </Label>
                     </div>
                     ))}
                 </Masonry>

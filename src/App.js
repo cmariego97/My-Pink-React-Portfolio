@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './assets/css/App.css';
 
 //import MUI
-import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
-import { Divider } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 //import components
 import NavBar from './components/NavBar';
