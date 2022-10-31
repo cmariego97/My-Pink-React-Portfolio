@@ -25,7 +25,7 @@ const itemData = [
     {
       img: 'https://i.ibb.co/VTH1t0n/kids-rx-emr.png',
       title: 'Kids-Rx-EMR',
-      github: '',
+      github: 'https://github.com/cmariego97/Kids-RX',
       app: 'https://kids-rx-emr.herokuapp.com/',
     },
     {
