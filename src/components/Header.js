@@ -13,10 +13,7 @@ import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 
 function Header() {
   return (
-    <Box className='headWrapper'>
-        {/* AVATAR */}
-        {/* <Avatar alt="an image of clarence" src={pfp} sx={{ width: 24, height: 24 }}/> */}
-
+    <Box className='headWrapper' id="home">
         <Box>
             <Stack direction="row" spacing={4} className="socials">
                 <Link href="https://github.com/cmariego97">

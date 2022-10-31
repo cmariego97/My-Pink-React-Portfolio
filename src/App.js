@@ -57,28 +57,28 @@ const theme = createTheme({
       },
       h4: {
         fontWeight: 400,
-        fontSize: 34,
+        fontSize: 42,
         textTransform: 'uppercase',
         lineHeight: '2rem',
       },
       h5: {
         fontFamily: ['Poppins', 'sans serif'],
         fontWeight: 100,
-        fontSize: 28,
+        fontSize: 30,
         textTransform: 'uppercase',
         lineHeight: '2rem',
       },
       h6: {
         fontFamily: ['Poppins', 'sans serif'],
         fontWeight: 400,
-        fontSize: 20,
+        fontSize: 24,
         textTransform: 'uppercase',
         lineHeight: '2rem',
       },
-      p: {
+      body1: {
         fontFamily: ['Poppins', 'sans serif'],
         fontWeight: 400,
-        fontSize: 18,
+        fontSize: 22,
         lineHeight: '1.5',
       }
   },

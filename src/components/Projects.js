@@ -11,13 +11,13 @@ import { GitHub, Language } from '@mui/icons-material'
 
 // styling
 const Label = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-    ...theme.typography.p,
-    padding: theme.spacing(0.5),
+    backgroundColor: '#F3F4F3',
+    ...theme.typography.h5,
+    padding: theme.spacing(2),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
-    borderBottomLeftRadius: 0,
-    borderBottomRightRadius: 0,
+    color: theme.palette.text.neutral,
+    borderBottomLeftRadius: 4,
+    borderBottomRightRadius: 4,
   }));
 
 // images

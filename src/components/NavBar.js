@@ -2,7 +2,7 @@ import * as React from 'react'
 import '../assets/css/styles.css'
 
 // import MUI
-import { AppBar, Box, Container, MenuItem, Toolbar, Typography } from '@mui/material'
+import { AppBar, Box, Button, Container, Toolbar, Typography } from '@mui/material'
 
 // import icons
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
@@ -15,36 +15,44 @@ function NavBar(changePage) {
     <AppBar position="sticky">
       <Container maxWidth="xl">
         <Toolbar disableGutters className="navBar">
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, m:2 }}>
-            <FavoriteBorderRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <FavoriteBorderRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-            <FavoriteBorderRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* TITLE - HOME */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, my:2 }}>
+            <FavoriteBorderRoundedIcon sx={{ my:2, mr:2, display: { xs: 'none', md: 'flex' }}} />
+            <Scroll to="home" smooth={true}>
+              <Button><Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, color: "#F3F4F3", letterSpacing: '.3rem' }}>Claire</Typography></Button>
+            </Scroll>
           </Box>
           
-
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, m:2 }}>
+          {/* NAV MENU ITEMS */}
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, my:2 }}>
             <Scroll to="about-me" smooth={true}>
-              <MenuItem>
-                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>About Me</Typography>
-              </MenuItem>
+              <Button>
+                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, color: "#F3F4F3", letterSpacing: '.3rem' }}>About Me</Typography>
+              </Button>
             </Scroll>
+
+            <Typography variant="h6" sx={{ my: 1.5, mx: 1, display: { xs: 'none', md: 'flex' }, color: "#F3F4F3", letterSpacing: '.3rem' }}>○</Typography>
 
             <Scroll to="my-projects" smooth={true}>
-              <MenuItem>
-                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>My Projects</Typography>
-              </MenuItem>
+              <Button>
+                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, color: "#F3F4F3", letterSpacing: '.3rem' }}>My Projects</Typography>
+              </Button>
             </Scroll>
+
+            <Typography variant="h6" sx={{ my: 1.5, mx: 1, display: { xs: 'none', md: 'flex' }, color: "#F3F4F3", letterSpacing: '.3rem' }}>○</Typography>
 
             <Scroll to="contact-me" smooth={true}>
-              <MenuItem>
-                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}>Contact Me</Typography>
-              </MenuItem>
+              <Button>
+                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, color: "#F3F4F3", letterSpacing: '.3rem' }}>Contact Me</Typography>
+              </Button>
             </Scroll>
 
+            <Typography variant="h6" sx={{ my: 1.5, mx: 1, display: { xs: 'none', md: 'flex' }, color: "#F3F4F3", letterSpacing: '.3rem' }}>○</Typography>
+
             <Scroll to="my-resume" smooth={true}>
-              <MenuItem>
-                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, letterSpacing: '.3rem' }}> My Resume</Typography>
-              </MenuItem>
+              <Button>
+                <Typography variant="h6" sx={{ my: 1, display: { xs: 'none', md: 'flex' }, color: "#F3F4F3", letterSpacing: '.3rem' }}> My Resume</Typography>
+              </Button>
             </Scroll>
           </Box>
         </Toolbar>

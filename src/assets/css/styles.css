@@ -12,7 +12,6 @@
 
 /* NAVBAR */
 .navBar {
-    margin: 0.2rem 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -81,18 +80,19 @@
 }
 
 .sectionInfo {
-    width: 60%;
+    display: flex;
     margin: 0 auto;
     padding: 2rem;
     color: var(--revolver);
     line-height: 1.5;
     text-align: center;
+    justify-items: center;
 }
 
 .sectionInfoContainer {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .emailInfo {
@@ -117,7 +117,9 @@
 }
 
 .masonryLink {
-    display: ;
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--camouflage-green);
 }
 
 /* CONTACT ME */
@@ -157,7 +159,8 @@
     margin: auto 0;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    justify-items: center;
+    align-content: space-between;
 }
 
 .formContainer {
