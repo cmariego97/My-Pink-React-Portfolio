@@ -88,13 +88,13 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <header className="App-header">
+        <div className="App-header">
           <NavBar />
           <Header />
           <AboutMe />
           <Projects />
           <Contact />
-        </header>
+        </div>
       </div>
     </ThemeProvider>
     
